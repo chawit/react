@@ -1,0 +1,14 @@
+
+
+
+component will update:ทำงานก่อนmethod render จะทำงานอีกครั้ง
+
+component did update:ทำงานหลัง method render ทำงานเสร็จ
+
+componentwillmount:ทำงานก่อนinsert 	to dom
+	
+componentDidMount: ทำงานหลัง insert to dom
+
+componentwillunmount:ทำงานก่อน remove componemt จาก dom
+
+shouldcomponentupdate:ทำงานก่อนเรียก method 	 component will update  ซึ่งเปิดโอกาศให้ return false(cancel event)

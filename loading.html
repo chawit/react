@@ -6,30 +6,44 @@
 <title>Page Title</title>
    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script> 
   <script>
+   function checkIOS(){
+var url_data=window.location.href;
+if(url_data.indexOf("ios")!=-1){
+ return true;
+ }else{
+ return false;
+ }
+ }
   function showAlert(){
- 
+ if(!checkIOS()){
+ return;
+ }
   
    swal({
   position: 'top',
   title: '',
   text: '',
-  timer: 5000,
+ 
   onOpen: () => {
     swal.showLoading()
   }
 })
+    setTimeout(function(){swal.close()  }, 3000);
   }
     function showAlertCenter(){
- 
+ if(!checkIOS()){
+ return;
+ }
    swal({
 
   title: '',
   text: '',
-  timer: 5000,
+
   onOpen: () => {
     swal.showLoading()
   }
 })
+     setTimeout(function(){swal.close()  }, 3000);
   }
   </script>
 </head>
@@ -37,5 +51,17 @@
  <button onclick="showAlert()">show</button> <br><br>
  <button onclick="showAlertCenter()">show Center</button> 
 
+ใส่คำสั่ง สำหรับแสดง<br>
+   position: 'top',
+  title: '',
+  text: '',
+  onOpen: () => {
+    swal.showLoading()
+  }
+})<br>
+ ใส่คำสั่ง swal.close()  สำหรับปิด<br>
+ 
+ 
+ 
 </body>
 </html> 

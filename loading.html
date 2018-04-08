@@ -15,10 +15,20 @@
   timer: 1500
 })
   }
+    function showAlertCenter(){
+  swal({
+
+  type: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})
+  }
   </script>
 </head>
 <body>
- <button onclick="showAlert()">show</button> 
+ <button onclick="showAlert()">show</button> <br><br>
+ <button onclick="showAlertCenter()">show Center</button> 
 
 </body>
 </html> 
